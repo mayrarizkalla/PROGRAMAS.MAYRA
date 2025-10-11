@@ -12,7 +12,7 @@ nascimento = st.date_input(
         max_value=datetime.date.today()
     )
     
-    if nascimento:
+if nascimento:
         hoje = datetime.date.today()
         idade = hoje.year - nascimento.year - ((hoje.month, hoje.day) < (nascimento.month, nascimento.day))
         st.write(f"**Idade:** {idade} anos")
