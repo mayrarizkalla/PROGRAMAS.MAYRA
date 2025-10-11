@@ -6,12 +6,8 @@ nome = st.text_input("Digite o seu nome:")
 if nome:
    st.success(f"Olá, {nome}! Seja bem-vindo(a)!")
 
-nascimento = st.date_input(
-        "Quando você nasceu?",
-        min_value = datetime.date(1900, 1, 1),
-        max_value = datetime.date.today()
-    )
-    
+
+nascimento = st.date_input("Quando você nasceu?")
 if nascimento:
         hoje = datetime.date.today()
         idade = hoje.year - nascimento.year - ((hoje.month, hoje.day) < (nascimento.month, nascimento.day))
