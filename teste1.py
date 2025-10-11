@@ -9,8 +9,8 @@ if nome:
 
 
 nascimento = st.date_input("Selecione sua data de nascimento:",
-        value=datetime.date(1, 1, 2000),
-        min_value=datetime.date(1, 1, 1900),
+        value=datetime.date(2000, 1, 1),
+        min_value=datetime.date(1900, 1, 1),
         max_value=datetime.date.today()
     )
     
