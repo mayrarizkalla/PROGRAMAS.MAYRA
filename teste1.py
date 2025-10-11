@@ -30,7 +30,7 @@ animal = st.selectbox(
 )
 
 if animal:
-    st.write(f"*Animal favorito:* **{animal}**")
+    st.write(f"Animal favorito: **{animal}**")
 
 
 musica = st.text_input("Qual sua música favorita?")
