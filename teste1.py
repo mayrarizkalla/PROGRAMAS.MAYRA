@@ -26,7 +26,7 @@ st.write(f"Sua cor favorita: **{cor_favorita}**")
 
 animal = st.selectbox(
     "Qual seu animal favorito?",
-    ["Cachorro", "Gato", "Pássaro", "Tigre", "Leão", "Golfinho", "Outro"]
+    ["Cachorro", "Gato", "Pássaro", "Tigre", "Leão", "Golfinho", "Tubarão", "Peixe", "Macaco", "Coelho", "Outro"]
 )
 
 if animal:
@@ -40,15 +40,10 @@ if musica:
 
 hobbies = st.multiselect(
     "O que você gosta de fazer no seu tempo livre?",
-    ["Ler", "Esportes", "Música", "Jogos", "Cozinhar", "Viajar", "Programar", "Filmes/Séries", "Arte"]
+    ["Ler", "Esportes", "Música", "Jogos", "Cozinhar", "Viajar", "Programar", "Filmes/Séries", "Dançar", "Escrever", "Desenhar/Pintar"]
 )
 
 if hobbies:
     st.write("**Seus hobbies:**")
     for hobby in hobbies:
         st.write(f"- {hobby}")
-
-
-# Rodapé
-st.markdown("---")
-st.markdown("Feito com ❤️ usando Streamlit | Meu primeiro app!")
