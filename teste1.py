@@ -1,19 +1,24 @@
 import streamlit as st 
+import datetime
 
-st.header("Sobre Mim")
+st.header("Meu Perfil Pessoal")
 
 nome = st.text_input("Digite o seu nome:")
 if nome:
    st.success(f"Olá, {nome}! Seja bem-vindo(a)!")
 
 
-nascimento = st.date_input("Quando você nasceu?")
-if nascimento:
-        hoje = datetime.date.today()
-        idade = hoje.year - nascimento.year - ((hoje.month, hoje.day) < (nascimento.month, nascimento.day))
-        st.write(f"**Idade:** {idade} anos")
-        st.write(f"**Aniversário:** {nascimento.strftime('%d/%m/%Y')}")
-
+nascimento = st.date_input("Selecione sua data de nascimento:",
+        value=datetime.date(2000, 1, 1),
+        min_value=datetime.date(1900, 1, 1),
+        max_value=datetime.date.today()
+    )
+    
+hoje = datetime.date.today()
+idade = hoje.year - nascimento.year
+    
+st.write(f"**Data de nascimento:** {nascimento.strftime('%d/%m/%Y')}")
+st.write(f"**Idade:** {idade} anos")
 
 cor_favorita = st.color_picker("Escolha sua cor favorita:", "#00ffaa")
 st.write(f"Sua cor favorita: **{cor_favorita}**")
